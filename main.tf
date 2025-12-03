@@ -22,7 +22,7 @@ data "aws_ami" "amazon_linux" {
 # 2. Tạo EC2 Instance
 resource "aws_instance" "web_server" {
   ami           = data.aws_ami.amazon_linux.id
-  instance_type = "t2.micro" # Loại nhỏ nhất (Free Tier)
+  instance_type = "t3.micro" # Loại nhỏ nhất (Free Tier)
 
   tags = {
     Name = "Server-Created-By-CICD"
